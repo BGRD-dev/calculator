@@ -90,6 +90,18 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func negativeValue(_ sender: UIButton) {
+        guard resultScreen.text != "0" else { return }
+        
+        if resultScreen.text?.prefix(1) != "-" {
+            resultScreen.text = "-" + resultScreen.text!
+        } else {
+            let saveTwo = String(resultScreen.text!)
+            resultScreen.text = String(saveTwo.dropFirst(1))
+        }
+        
+    }
+    
     @IBAction func digits(_ sender: UIButton) {
         if resultScreen.text == "0" && mathSignPressed == false{
             resultScreen.text = String(sender.tag)
