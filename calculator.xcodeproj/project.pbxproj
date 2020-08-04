@@ -13,6 +13,7 @@
 		A41EB32024CE061900264F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41EB31E24CE061900264F8F /* Main.storyboard */; };
 		A41EB32224CE061B00264F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41EB32124CE061B00264F8F /* Assets.xcassets */; };
 		A41EB32524CE061B00264F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41EB32324CE061B00264F8F /* LaunchScreen.storyboard */; };
+		A4FE1F6424D8F3E200A9AF2F /* VCFuncExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE1F6324D8F3E200A9AF2F /* VCFuncExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A41EB32124CE061B00264F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41EB32424CE061B00264F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41EB32624CE061B00264F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4FE1F6324D8F3E200A9AF2F /* VCFuncExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFuncExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A41EB32124CE061B00264F8F /* Assets.xcassets */,
 				A41EB32324CE061B00264F8F /* LaunchScreen.storyboard */,
 				A41EB32624CE061B00264F8F /* Info.plist */,
+				A4FE1F6324D8F3E200A9AF2F /* VCFuncExtension.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				A41EB31D24CE061900264F8F /* ViewController.swift in Sources */,
 				A41EB31924CE061900264F8F /* AppDelegate.swift in Sources */,
 				A41EB31B24CE061900264F8F /* SceneDelegate.swift in Sources */,
+				A4FE1F6424D8F3E200A9AF2F /* VCFuncExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

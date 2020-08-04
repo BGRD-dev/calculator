@@ -36,11 +36,15 @@ class ViewController: UIViewController {
     @IBOutlet var digitZero: UIButton!
     
     
-    private var mathSignPressed = false
-    private var mathSing = 0
-    private var firstValue = 0
-    private var secondValue = 0
-    private var result = 0
+    
+    var mathSignPressed = false
+    var mathSign = 0
+    var value = (first: 0, second: 0)
+//    var result = 0
+    
+    let negativeSymbol = "-"
+    
+    
     
     
     override func viewDidLoad() {
@@ -74,32 +78,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clearAllValues(_ sender: UIButton) {
-        resultScreen.text = "0"
-        mathSignPressed = false
-        mathSing = 0
-        firstValue = 0
-        secondValue = 0
+        clear()
     }
     
     
-    @IBAction func mathSignPressed(_ sender: UIButton) {
-        
-        mathSignPressed = true
-        mathSing = sender.tag
-        firstValue = Int(resultScreen.text!)!
+    @IBAction func mathSignButton(_ sender: UIButton) {
+        value.first = getValue()
+        mathSignButtonPressedWith(tag: sender.tag)
     }
     
     
     @IBAction func negativeValue(_ sender: UIButton) {
-        guard resultScreen.text != "0" else { return }
-        
-        if resultScreen.text?.prefix(1) != "-" {
-            resultScreen.text = "-" + resultScreen.text!
-        } else {
-            let saveTwo = String(resultScreen.text!)
-            resultScreen.text = String(saveTwo.dropFirst(1))
-        }
-        
+        negativeValueSwitcher()
     }
     
     @IBAction func digits(_ sender: UIButton) {
@@ -115,20 +105,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func result(_ sender: UIButton) {
-        secondValue = Int(resultScreen.text!)!
+        value.second = getValue()
+        resultScreen.text = getResultInt()
+//        mathSignPressed = true
         
-        if mathSing == 10 {
-            result = firstValue / secondValue
-        }else if mathSing == 11 {
-            result = firstValue * secondValue
-        }else if mathSing == 12 {
-        result = firstValue - secondValue
-        }else if mathSing == 13 {
-        result = firstValue + secondValue
-        }
-        
-        resultScreen.text = String(result)
-        mathSignPressed = true
     }
 
 }
